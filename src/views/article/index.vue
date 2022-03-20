@@ -110,11 +110,19 @@
         </el-table-column>
         <el-table-column label="操作">
           <template slot-scope="scope">
-            <el-button size="small" type="primary" circle icon="el-icon-edit"></el-button>
+            <el-button
+              size="small"
+              type="primary"
+              circle
+              icon="el-icon-edit"
+              @click="$router.push('/publish?id=' + scope.row.id)"
+            >
+            </el-button>
             <el-button
               size="small"
               type="danger"
-              circle icon="el-icon-delete"
+              circle
+              icon="el-icon-delete"
               @click="onDeleteArticle(scope.row.id)"
             >
             </el-button>
